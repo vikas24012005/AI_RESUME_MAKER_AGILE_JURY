@@ -20,10 +20,21 @@ const createNewResume = async (data) => {
 
 const getResumes = async (user_email) => {
   try {
-    const response = await axiosInstance.get("/user-resumes?filters[user_email][$eq]="+user_email);
+    const response = await axiosInstance.get(
+      "/user-resumes?filters[user_email][$eq]=" + user_email
+    );
     return response.data;
   } catch (error) {
     console.error("Error getting resumes:", error);
   }
 };
-export { createNewResume, getResumes };
+
+const updateResumeData = async (id, data) => {
+  try {
+    const response = await axiosInstance.put(`/user-resumes/${id}`, data);
+    return response.data;
+  } catch (error) {
+    console.error("Error updating resume data:", error);
+  }
+};
+export { createNewResume, getResumes,updateResumeData };

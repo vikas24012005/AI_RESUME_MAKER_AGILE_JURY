@@ -1,19 +1,18 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import ResumeForm from '../components/ResumeForm'
-import Preview from '../components/Preview'
-import data from "../../../../../data/dummy";
+import React from "react";
+import ResumeForm from "../components/ResumeForm";
+import PreviewPage from "../components/PreviewPage";
+import { Provider } from "react-redux";
+import { resumeStore } from "../../../../store/store";
 
 export function EditResume() {
-  const { resume_id } = useParams()
-  console.log(data);
-  console.log(resume_id)
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 p-10 gap-10' >
-      <ResumeForm />
-      <Preview />
-    </div>
-  )
+    <Provider store={resumeStore}>
+      <div className="grid grid-cols-1 md:grid-cols-2 p-10 gap-10">
+        <ResumeForm />
+        <PreviewPage />
+      </div>
+    </Provider>
+  );
 }
 
-export default EditResume
+export default EditResume;
