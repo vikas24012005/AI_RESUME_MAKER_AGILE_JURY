@@ -9,6 +9,7 @@ import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { AUTH_KEY } from "./config/config.js";
 import { EditResume } from "./pages/dashboard/edit-resume/[resume_id]/EditResume.jsx";
+import ViewResume from "./pages/dashboard/view-resume/[resume_id]/ViewResume.jsx";
 
 if (!AUTH_KEY) {
   throw new Error("Missing Publishable Key");
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/edit-resume/:resume_id",
         element: <EditResume />,
+      },
+      {
+        path: "/dashboard/view-resume/:resume_id",
+        element: <ViewResume />,
       },
     ],
   },

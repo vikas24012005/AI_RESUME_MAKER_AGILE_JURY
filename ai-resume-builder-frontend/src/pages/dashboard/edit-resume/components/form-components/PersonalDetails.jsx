@@ -13,19 +13,14 @@ function PersonalDetails({ resumeInfo, enanbledNext }) {
   const dispatch = useDispatch();
   const [loading, setLoading] = React.useState(false);
   const [formData, setFormData] = React.useState({
-    firstName: resumeInfo?.firstName || "John",
-    lastName: resumeInfo?.lastName || "Doe",
-    jobTitle: resumeInfo?.jobTitle || "Software Engineer",
-    address: resumeInfo?.address || "123 Main St",
-    phone: resumeInfo?.phone || "555-1234",
-    email: resumeInfo?.email || "john.doe@example.com",
+    firstName: resumeInfo?.firstName || "",
+    lastName: resumeInfo?.lastName || "",
+    jobTitle: resumeInfo?.jobTitle || "",
+    address: resumeInfo?.address || "",
+    phone: resumeInfo?.phone || "",
+    email: resumeInfo?.email || "",
   });
 
-  useEffect(() => {
-    if (resume_id) {
-      console.log("Resume ID", resume_id);
-    }
-  }, []);
 
   const handleInputChange = (e) => {
     enanbledNext(false);

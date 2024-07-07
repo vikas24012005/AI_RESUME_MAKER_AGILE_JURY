@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@media print {
+  #noPrint {
+    display: none;
+  }
+  #print {
+    display: block;
+  }
+  #printHeader {
+    display: none;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -73,4 +95,13 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.rsw-ce ul {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.rsw-ce ol {
+  list-style: decimal;
+  padding-left: 2em;
 }

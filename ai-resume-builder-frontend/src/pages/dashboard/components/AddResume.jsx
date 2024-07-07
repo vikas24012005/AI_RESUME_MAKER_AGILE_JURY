@@ -7,7 +7,6 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,39 +17,39 @@ import { useNavigate } from "react-router-dom";
 
 function AddResume() {
   const [isDialogOpen, setOpenDialog] = useState(false);
-  const [resumeTittle, setResumeTittle] = useState("");
+  const [resumetitle, setResumetitle] = useState("");
   const { user } = useUser();
   const [loading, setLoading] = useState(false);
   const Navigate = useNavigate();
 
   const createResume = async () => {
     setLoading(true);
-    if (resumeTittle === "")
-      return console.log("Please add a tittle to your resume");
+    if (resumetitle === "")
+      return console.log("Please add a title to your resume");
     const resumeId = uuidv4();
     const data = {
       data: {
-        tittle: resumeTittle,
+        title: resumetitle,
         resume_id: resumeId,
         user_name: user?.fullName,
         user_email: user?.primaryEmailAddress.emailAddress,
       },
     };
-    console.log(`Creating Resume ${resumeTittle} and ID: ${resumeId}`);
+    console.log(`Creating Resume ${resumetitle} and ID: ${resumeId}`);
     createNewResume(data)
       .then((res) => {
-        console.log(res);
-        Navigate(`/dashboard/edit-resume/${res.data.data.documentId}`);
+        console.log("Prinitng From AddResume Respnse of Create Resume",res);
+        Navigate(`/dashboard/edit-resume/${res.data.id}`);
       })
       .finally(() => {
         setLoading(false);
-        setResumeTittle("");
+        setResumetitle("");
       });
   };
   return (
     <>
       <div
-        className="p-14 py-24 flex items-center justify-center border-2 bg-secondary rounded-lg h-[280px] hover:scale-105 transition-all duration-400 cursor-pointer hover:shadow-md transform-gpu"
+        className="p-14 py-24 flex items-center justify-center border-2 bg-secondary rounded-lg h-[380px] hover:scale-105 transition-all duration-400 cursor-pointer hover:shadow-md transform-gpu"
         onClick={() => setOpenDialog(true)}
       >
         <CopyPlus className="transition-transform duration-300" />
@@ -60,13 +59,13 @@ function AddResume() {
           <DialogHeader>
             <DialogTitle>Create a New Resume</DialogTitle>
             <DialogDescription>
-              Add a Tittle and Description to your new resume
+              Add a title and Description to your new resume
               <Input
                 className="my-3"
                 type="text"
                 placeholder="Ex: Backend Resume"
-                value={resumeTittle}
-                onChange={(e) => setResumeTittle(e.target.value.trimStart())}
+                value={resumetitle}
+                onChange={(e) => setResumetitle(e.target.value.trimStart())}
               />
             </DialogDescription>
             <div className="gap-2 flex justify-end">
@@ -75,7 +74,7 @@ function AddResume() {
               </Button>
               <Button
                 onClick={createResume}
-                disabled={!resumeTittle || loading}
+                disabled={!resumetitle || loading}
               >
                 {loading ? (
                   <Loader className=" animate-spin" />

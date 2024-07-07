@@ -5,12 +5,12 @@ import SummeryPreview from "./preview-components/SummaryPreview";
 import ExperiencePreview from "./preview-components/ExperiencePreview";
 import EducationalPreview from "./preview-components/EducationalPreview";
 import SkillsPreview from "./preview-components/SkillsPreview";
+import ProjectPreview from "./preview-components/ProjectPreview";
 
 function PreviewPage() {
   const resumeData = useSelector((state) => state.editResume.resumeData);
   useEffect(() => {
-    console.log("PreviewPage rendered");
-    console.log(resumeData);
+    console.log("PreviewPage rendered ",resumeData);
   }, [resumeData]);
   return (
     <div
@@ -22,7 +22,8 @@ function PreviewPage() {
       <PersonalDeatailPreview resumeInfo={resumeData} />
       {}
       <SummeryPreview resumeInfo={resumeData} />
-      <ExperiencePreview resumeInfo={resumeData} />
+      {resumeData?.experience && <ExperiencePreview resumeInfo={resumeData} />}
+      {resumeData?.projects && <ProjectPreview resumeInfo={resumeData} />}
       {resumeData?.education && <EducationalPreview resumeInfo={resumeData} />}
       {resumeData?.skills && <SkillsPreview resumeInfo={resumeData} />}
     </div>

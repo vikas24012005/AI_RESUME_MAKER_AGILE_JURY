@@ -3,11 +3,12 @@ import AddResume from "./components/AddResume";
 import { getResumes } from "@/Services/GlobalApi";
 import { useUser } from "@clerk/clerk-react";
 import ResumeCard from "./components/ResumeCard";
+import { Provider } from "react-redux";
+import { resumeStore } from "@/store/store";
 
 function Dashboard() {
   const { user } = useUser();
   const [resumeList, setResumeList] = React.useState([]);
-
 
   useEffect(() => {
     user && getUserResumeList();
@@ -15,7 +16,10 @@ function Dashboard() {
 
   const getUserResumeList = async () => {
     getResumes(user?.primaryEmailAddress.emailAddress).then((resumes) => {
-      console.log(`List of`, resumes.data);
+      console.log(
+        `Printing from DashBoard List of Resumes got from Backend`,
+        resumes.data
+      );
       setResumeList(resumes.data);
     });
   };
@@ -27,8 +31,12 @@ function Dashboard() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-5 gap-4">
         <AddResume />
         {resumeList.length > 0 &&
-          resumeList.map((resume) => (
-            <ResumeCard key={resume.resume_id} resume={resume} />
+          resumeList.map((resume, index) => (
+            <ResumeCard
+              key={resume.attributes.resume_id}
+              resume={resume}
+              refreshData={getUserResumeList}
+            />
           ))}
       </div>
     </div>

@@ -18,7 +18,7 @@ const data = {
       startDate: "Jan 2021",
       endDate: "",
       currentlyWorking: true,
-      workSummery:
+      workSummary:
         " Designed, developed, and maintained full-stack applications using React and Node.js.\n" +
         "• Implemented responsive user interfaces with React, ensuring seamless user experiences across\n" +
         "various devices and browsers.\n" +
@@ -35,13 +35,29 @@ const data = {
       startDate: "May 2019",
       endDate: "Jan 2021",
       currentlyWorking: false,
-      workSummery:
+      workSummary:
         " Designed, developed, and maintained full-stack applications using React and Node.js." +
         "• Implemented responsive user interfaces with React, ensuring seamless user experiences across" +
         "various devices and browsers." +
         "• Maintaining the React Native in-house organization application." +
         "• CreatedRESTfulAPIs withNode.js and Express,facilitating data communicationbetween the front-end" +
         "and back-end systems.",
+    },
+  ],
+  projects: [
+    {
+      id: 1,
+      projectName: "E-commerce Website",
+      techStack: "React, Node.js, Express, MongoDB",
+      projectSummary:
+        "Designed and developed an e-commerce website using React and Node.js. Implemented a responsive user interface with React, ensuring seamless user experiences across various devices and browsers. Created RESTful APIs with Node.js and Express, facilitating data communication between the front-end and back-end systems.",
+    },
+    {
+      id: 2,
+      projectName: "Portfolio Website",
+      techStack: "",
+      projectSummary:
+        "Designed and developed a portfolio website using React and Node.js. Implemented a responsive user interface with React, ensuring seamless user experiences across various devices and browsers. Created RESTful APIs with Node.js and Express, facilitating data communication between the front-end and back-end systems.",
     },
   ],
   education: [
@@ -51,6 +67,8 @@ const data = {
       startDate: "Aug 2018",
       endDate: "Dec:2019",
       degree: "Master",
+      gradeType: "CGPA",
+      grade: "3.5",
       major: "Computer Science",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
@@ -61,6 +79,8 @@ const data = {
       startDate: "Aug 2018",
       endDate: "Dec:2019",
       degree: "Master",
+      gradeType: "CGPA",
+      grade: "3.5",
       major: "Computer Science",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
