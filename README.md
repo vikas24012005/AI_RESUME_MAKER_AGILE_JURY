@@ -16,6 +16,7 @@ A live demo of the application can be found [here](https://main--ai-resume-build
 
 ![Thumbnil](path/to/screenshot.png)
 
+
 ## Installation
 
 To run the AI Resume Builder locally, follow these steps:
@@ -40,17 +41,21 @@ cd ai-resume-builder
 ```bash
   //open now terminal
   cd ai-resume-builder-frontend
-  npm start
+  npm run dev
 ```
 
+### Go to the backend directory and install the dependencies
+```bash
+  cd ai-resume-builder-backend/
+  npm install
+```
 ### Start the server
 
 ```bash
   //open now terminal
   cd ai-resume-builder-backend
-  npm run start
+  npm run develop
 ```
-
 
 
 ## Features
