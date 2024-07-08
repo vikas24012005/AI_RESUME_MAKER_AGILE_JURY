@@ -7,7 +7,7 @@ AI Resume Builder is a modern web application that leverages artificial intellig
 
 **Backend:** Strapi, Node JS
 
-**Database:** Neon Postgres
+**Database:** Neon Postgres SQL
 
 
 ## Demo
