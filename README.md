@@ -1,6 +1,15 @@
 # AI Resume Builder
 AI Resume Builder is a modern web application that leverages artificial intelligence to assist users in creating professional resumes. The application is designed with a user-friendly interface and powerful backend services to ensure efficient and secure handling of user data.
 
+## Tech Stack
+
+**Frontend:** React JS , TailwindCSS , Redux Tookit
+
+**Backend:** Strapi, Node JS
+
+**Database:** Neon Postgres
+
+
 ## Demo
 
 A live demo of the application can be found [here](https://main--ai-resume-builder-07.netlify.app/)
@@ -25,12 +34,21 @@ cd ai-resume-builder
   cd ai-resume-builder-frontend/
   npm install
 ```
-### Start the app
+
+### Start the client
 
 ```bash
   //open now terminal
   cd ai-resume-builder-frontend
   npm start
+```
+
+### Start the server
+
+```bash
+  //open now terminal
+  cd ai-resume-builder-backend
+  npm run start
 ```
 
 
