@@ -78,7 +78,7 @@ The user dashboard includes previous resume history that can be edited and delet
 
 ### 3. Customizable Templates
 
-Choose from a variety of professionally designed templates.
+Choose from a variety of theme designed templates.
 
 ![template](./Screenshot/ThemeCust.png)
 
