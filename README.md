@@ -34,31 +34,36 @@ cd ai-resume-builder
 ```
 
 
+
 ## Features
 
-## 1.User Authentication
+## 1. User Authentication
 
 Secure login and registration with Clerk authentication.
 
 ![User Authentication](path/to/authentication-screenshot.png)
 
-### 2.User Dashboard
+
+### 2. User Dashboard
 
 The user dashboard includes previous resume history that can be edited and deleted.
 
 ![User Dashboard](path/to/screenshot.png)
 
-### 3.Customizable Templates
+
+### 3. Customizable Templates
 
 Choose from a variety of professionally designed templates.
 
 ![template](path/to/screenshot.png)
 
-### 4.AI-Powered Suggestions
+
+### 4. AI-Powered Suggestions
 
 Leverages AI to provide suggestions for resume content.
 
 ![sc](path/to/screenshot.png)
+
 
 ### 5. Live Preview
 
@@ -66,16 +71,17 @@ See changes to your resume in real-time as you edit.
 
 ![sc](path/to/screenshot.png)
 
-### 6.Export Options
+
+### 6. Export Options
 
 Users can download their resumes in PDF format for easy sharing and printing.
 
 ![sc](path/to/screenshot.png)
 
 
+
 ## Made By
 
 - [@Sahid Raja Ansari](https://www.linkedin.com/in/sahidrajaansari/)
-- [@Shaharyar Alam](https://www.linkedin.com/in/shaharyar-alam-305322208/)
-- 
+- [@Shaharyar Alam](https://www.linkedin.com/in/shaharyar-alam-305322208/) 
 
