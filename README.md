@@ -66,42 +66,43 @@ cd ai-resume-builder
 
 Secure login and registration with Clerk authentication.
 
-![User Authentication](path/to/authentication-screenshot.png)
+![User Authentication](./Screenshot/Authentication.png)
 
 
 ### 2. User Dashboard
 
 The user dashboard includes previous resume history that can be edited and deleted.
 
-![User Dashboard](path/to/screenshot.png)
+![User Dashboard](./Screenshot/Dashboard.png)
 
 
 ### 3. Customizable Templates
 
 Choose from a variety of professionally designed templates.
 
-![template](path/to/screenshot.png)
+![template](./Screenshot/ThemeCust.png)
 
 
 ### 4. AI-Powered Suggestions
 
 Leverages AI to provide suggestions for resume content.
 
-![sc](path/to/screenshot.png)
+![AI Suggestion](./Screenshot/AI%20Suggestions.png)
 
 
 ### 5. Live Preview
 
 See changes to your resume in real-time as you edit.
 
-![sc](path/to/screenshot.png)
+![Live changes](./Screenshot/Screenshot%202024-07-08%20233753.png)
 
 
 ### 6. Export Options
 
 Users can download their resumes in PDF format for easy sharing and printing.
 
-![sc](path/to/screenshot.png)
+![Download & Share](./Screenshot/downloadShare.png)
+
 
 
 
