@@ -108,7 +108,8 @@ const loginUser = async (req, res) => {
 
     const cookieOptions = {
       httpOnly: true,
-      sameSite: process.env.NODE_ENV === "Dev" ? "Lax" : "Strict", // Set SameSite attribute for better security
+      sameSite: process.env.NODE_ENV == "Dev" ? "lax" : "none", // Set SameSite attribute for better security
+      secure: process.env.NODE_ENV == "Dev" ? false : true, // Set Secure attribute for better security
     };
 
     console.log("Login Successful");
