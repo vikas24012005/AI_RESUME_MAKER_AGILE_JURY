@@ -12,7 +12,9 @@ AI Resume Builder is a sophisticated web application that leverages artificial i
 **Backend:** Node JS, Express.js  
 **Database:** MongoDB  
 
-## Demo
+## Demo Video
+
+Watch a demonstration of the application on [YouTube](https://youtu.be/IBdpMBvtZhU)
 
 Explore a live demo of the application [here](https://main--ai-resume-builder-07.netlify.app/)
 
@@ -96,10 +98,6 @@ Real-time preview of resume changes as you edit.
 Download resumes in PDF format for easy sharing and printing.
 
 ![Download & Share](./Screenshot/downloadShare.png)
-
-## Demo Video
-
-Watch a demonstration of the application on [YouTube](https://youtu.be/IBdpMBvtZhU)
 
 ## Developers
 
