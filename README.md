@@ -1,7 +1,3 @@
-Here's the revised content reflecting your custom user authentication setup:
-
----
-
 # AI Resume Builder
 
 AI Resume Builder is a sophisticated web application that leverages artificial intelligence to empower users in crafting professional resumes. The application features an intuitive interface and robust backend services for secure data management.
