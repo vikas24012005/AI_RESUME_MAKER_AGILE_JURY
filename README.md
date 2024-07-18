@@ -64,6 +64,8 @@ npm run dev
 ### 1. Custom User Authentication
 
 Secure login and registration with custom bcrypt password hashing, JWT tokens, and cookie-based session management.
+![Sign In](./Screenshot/SignIn.png)
+![Sign Up](./Screenshot/SignUp.png)
 
 ### 2. User Dashboard
 
@@ -97,7 +99,7 @@ Download resumes in PDF format for easy sharing and printing.
 
 ## Demo Video
 
-Watch a demonstration of the application on [YouTube](https://www.youtube.com/your-youtube-video-link)
+Watch a demonstration of the application on [YouTube](https://youtu.be/IBdpMBvtZhU)
 
 ## Developers
 

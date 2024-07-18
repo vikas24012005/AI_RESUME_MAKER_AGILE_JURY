@@ -49,7 +49,7 @@ function ResumeCard({ resume, refreshData }) {
   };
   return (
     <div
-      className={`p-5 bg-gradient-to-r ${gradient} h-[380px] rounded-lg flex flex-col justify-between shadow-lg transition duration-300 ease-in-out cursor-pointer hover:shadow-xl`}
+      className={`p-5 bg-gradient-to-r ${gradient} h-[380px] sm:h-auto rounded-lg flex flex-col justify-between shadow-lg transition duration-300 ease-in-out cursor-pointer hover:shadow-xl`}
     >
       <div className="flex items-center justify-center p-6 bg-white rounded-t-lg shadow-md">
         <h2
@@ -80,12 +80,6 @@ function ResumeCard({ resume, refreshData }) {
         >
           <FaTrashAlt className="text-gray-600 hover:text-pink-600 transition duration-300 ease-in-out" />
         </Button>
-        <FaTrashAlt
-          className="cursor-pointer text-gray-600 hover:text-pink-600 hover:scale-110 transition duration-300 ease-in-out"
-          onClick={() => {
-            setOpenAlert(true);
-          }}
-        />
         <AlertDialog open={openAlert} onClose={() => setOpenAlert(false)}>
           <AlertDialogContent>
             <AlertDialogHeader>
