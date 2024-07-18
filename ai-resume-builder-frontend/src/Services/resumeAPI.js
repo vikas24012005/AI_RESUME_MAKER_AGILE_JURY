@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
 const createNewResume = async (data) => {
   try {
     const response = await axiosInstance.post(
-      "/resumes/createResume",
+      "resumes/createResume",
       data.data
     );
     return response.data;
@@ -26,7 +26,7 @@ const createNewResume = async (data) => {
 
 const getAllResumeData = async () => {
   try {
-    const response = await axiosInstance.get("/resumes/getAllResume");
+    const response = await axiosInstance.get("resumes/getAllResume");
     return response.data;
   } catch (error) {
     // console.log("Eroor in getting all the resumes ",error);
@@ -39,7 +39,7 @@ const getAllResumeData = async () => {
 const getResumeData = async (resumeID) => {
   try {
     const response = await axiosInstance.get(
-      `/resumes/getResume?id=${resumeID}`
+      `resumes/getResume?id=${resumeID}`
     );
     return response.data;
   } catch (error) {
@@ -52,7 +52,7 @@ const getResumeData = async (resumeID) => {
 const updateThisResume = async (resumeID, data) => {
   try {
     const response = await axiosInstance.put(
-      `/resumes/updateResume?id=${resumeID}`,
+      `resumes/updateResume?id=${resumeID}`,
       data.data
     );
     return response.data;
@@ -66,7 +66,7 @@ const updateThisResume = async (resumeID, data) => {
 const deleteThisResume = async (resumeID) => {
   try {
     const response = await axiosInstance.delete(
-      `/resumes/removeResume?id=${resumeID}`
+      `resumes/removeResume?id=${resumeID}`
     );
     return response.data;
   } catch (error) {
