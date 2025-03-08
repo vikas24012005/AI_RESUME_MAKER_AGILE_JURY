@@ -4,14 +4,14 @@ AI Resume Builder is a sophisticated web application that leverages artificial i
 
 ## 📌 Index  
 
-- [Tech Stack](##tech-stack)  
-- [Demo](##demo)  
-- [Installation](##installation)  
-  - [Setup with Docker](###setup-with-docker)  
-  - [Setup without Docker](###setup-without-docker)  
-- [Features](##features)  
-- [Contribution](##contribution)  
-- [Developers](##developers)  
+- [Tech Stack](#tech-stack)  
+- [Demo](#demo)  
+- [Installation](#installation)  
+  - [Setup with Docker](#setup-with-docker)  
+  - [Setup without Docker](#setup-without-docker)  
+- [Features](#features)  
+- [Contribution](#contribution)  
+- [Developers](#developers)  
 
 ---
 
