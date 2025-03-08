@@ -50,9 +50,9 @@ Before proceeding, create the necessary environment files for **both frontend an
 Create a `.env` file inside the `Backend/` directory and add the following:  
 
 ```plaintext
-MONGODB_URI={Your MongoDB URI} # If using Docker: mongodb://localhost:27017/
+MONGODB_URI={Your MongoDB URI} # If using Docker: mongodb://mongodb:27017/ai-resume-builder
 PORT=5001
-JWT_SECRET_KEY={Your Secret Key}
+JWT_SECRET_KEY={Your Secret Key} #example "secret"
 JWT_SECRET_EXPIRES_IN="1d"
 NODE_ENV=Dev
 ALLOWED_SITE=http://localhost:5173
