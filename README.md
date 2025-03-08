@@ -95,6 +95,59 @@ Download resumes in PDF format for easy sharing and printing.
 
 ![Download & Share](./Screenshot/downloadShare.png)
 
+## Contribution
+
+We welcome contributions to improve AI Resume Builder! To contribute, follow these steps:
+
+### 1. Fork the Repository
+
+Click the **Fork** button at the top right of the repository page to create your own copy.
+
+### 2. Clone Your Fork
+
+```bash
+git clone https://github.com/your-username/ai-resume-builder.git
+cd ai-resume-builder
+```
+
+### 3. Create a New Branch
+
+```bash
+git checkout -b feature-name
+```
+
+Replace `feature-name` with a descriptive name for your changes.
+
+### 4. Make Your Changes
+
+Modify the code and test your changes locally.
+
+### 5. Commit Your Changes
+
+```bash
+git add .
+git commit -m "Describe your changes"
+```
+
+### 6. Push to Your Fork
+
+```bash
+git push origin feature-name
+```
+
+### 7. Create a Pull Request (PR)
+
+- Go to the original repository:  
+  **https://github.com/sahidrajaansari/ai-resume-builder**
+- Click **"New Pull Request"** and select your branch.
+- Add a description and submit your PR.
+
+### 8. Review and Merge
+
+The maintainers will review your PR. Once approved, it will be merged into the main repository.
+
+This makes it easier for contributors to understand how to contribute to your project. Let me know if you need further changes! 😊
+
 ## Developers
 
 - [@Sahid Raja Ansari](https://www.linkedin.com/in/sahidrajaansari/)
