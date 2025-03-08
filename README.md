@@ -25,7 +25,7 @@ To run AI Resume Builder locally, follow these steps:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ai-resume-builder.git
+git clone https://github.com/sahidrajaansari/ai-resume-builder.git
 cd ai-resume-builder
 ```
 
