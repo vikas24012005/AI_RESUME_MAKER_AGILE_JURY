@@ -1,20 +1,35 @@
 # AI Resume Builder
 
-AI Resume Builder is a sophisticated web application that leverages artificial intelligence to empower users in crafting professional resumes. The application features an intuitive interface and robust backend services for secure data management.
+AI Resume Builder is a sophisticated web application that leverages artificial intelligence to help users craft professional resumes. The application features an intuitive interface and robust backend services for secure data management.
+
+## 📌 Index  
+
+- [Tech Stack](#tech-stack)  
+- [Demo](#demo)  
+- [Installation](#installation)  
+  - [Setup with Docker](#setup-with-docker)  
+  - [Setup without Docker](#setup-without-docker)  
+- [Features](#features)  
+- [Contribution](#contribution)  
+- [Developers](#developers)  
+
+---
 
 ## Tech Stack
 
-**Frontend:** React JS, TailwindCSS, Redux Toolkit  
-**Backend:** Node JS, Express.js  
-**Database:** MongoDB  
+- **Frontend:** React.js, TailwindCSS, Redux Toolkit  
+- **Backend:** Node.js, Express.js, Docker  
+- **Database:** MongoDB  
 
-## Demo Video
+## Demo
 
-Watch a demonstration of the application on [YouTube](https://youtu.be/IBdpMBvtZhU)
+🔗 Watch a demonstration on [YouTube](https://youtu.be/IBdpMBvtZhU)  
 
-Explore a live demo of the application [here](https://main--ai-resume-builder-07.netlify.app/)
+🌐 Live demo: [AI Resume Builder](https://main--ai-resume-builder-07.netlify.app/)  
 
 ![Thumbnail](./Screenshot/Thumbnil.png)
+
+---
 
 ## Installation
 
@@ -27,81 +42,114 @@ git clone https://github.com/sahidrajaansari/ai-resume-builder.git
 cd ai-resume-builder
 ```
 
-### Frontend Setup
+### Setup with Docker
 
-Navigate to the frontend directory and install dependencies:
+1. Navigate to the backend directory:
+    ```bash
+    cd Backend/
+    ```
 
-```bash
-cd ai-resume-builder-frontend/
-npm install
-```
+2. Run the Docker Compose file:
+    ```bash
+    docker-compose up -d
+    ```
 
-Start the frontend server:
+3. Start the frontend server:
+    ```bash
+    cd ../ai-resume-builder-frontend/
+    npm install
+    npm run dev
+    ```
 
-```bash
-npm run dev
-```
+### Setup without Docker
 
-### Backend Setup
+#### Frontend Setup
 
-Navigate to the backend directory and install dependencies:
+1. Navigate to the frontend directory and install dependencies:
+    ```bash
+    cd ai-resume-builder-frontend/
+    npm install
+    ```
 
-```bash
-cd Backend/
-npm install
-```
+2. Create a `.env.local` file with the following content:
+    ```plaintext
+    VITE_GEMENI_API_KEY={Your Gemini API Key}
+    VITE_APP_URL=http://localhost:5001/
+    ```
 
-Start the backend server:
+3. Start the frontend server:
+    ```bash
+    npm run dev
+    ```
 
-```bash
-npm run dev
-```
+#### Backend Setup
+
+1. Navigate to the backend directory and install dependencies:
+    ```bash
+    cd Backend/
+    npm install
+    ```
+
+2. Create a `.env` file with the following content:
+    ```plaintext
+    MONGODB_URI={Your MongoDB URI} # If using Docker: mongodb://localhost:27017/
+    PORT=5001
+    JWT_SECRET_KEY={Your Secret Key}
+    JWT_SECRET_EXPIRES_IN="1d"
+    NODE_ENV=Dev
+    ALLOWED_SITE=http://localhost:5173
+    ```
+
+3. Start the backend server:
+    ```bash
+    npm run dev
+    ```
+
+---
 
 ## Features
 
-### 1. Custom User Authentication
+### 1. 🔒 Secure User Authentication  
+- Custom authentication with **bcrypt** password hashing  
+- **JWT-based** session management  
 
-Secure login and registration with custom bcrypt password hashing, JWT tokens, and cookie-based session management.
-![Sign In](./Screenshot/SignIn.png)
-![Sign Up](./Screenshot/SignUp.png)
+![Sign In](./Screenshot/SignIn.png)  
+![Sign Up](./Screenshot/SignUp.png)  
 
-### 2. User Dashboard
+### 2. 🏠 User Dashboard  
+- View and manage previous resume versions  
 
-Manage and edit previous resume versions from the user dashboard.
+![User Dashboard](./Screenshot/Dashboard.png)  
 
-![User Dashboard](./Screenshot/Dashboard.png)
+### 3. 🎨 Customizable Templates  
+- Choose from multiple resume templates  
 
-### 3. Customizable Templates
+![Template Customization](./Screenshot/ThemeCust.png)  
 
-Choose from a variety of customizable resume templates.
+### 4. 🤖 AI-Powered Suggestions  
+- Smart resume content suggestions  
 
-![Template Customization](./Screenshot/ThemeCust.png)
+![AI Suggestions](./Screenshot/AI%20Suggestions.png)  
 
-### 4. AI-Powered Suggestions
+### 5. 🔍 Live Preview  
+- See real-time resume updates  
 
-AI-driven suggestions for enhancing resume content.
+![Live Preview](./Screenshot/Screenshot%202024-07-08%20233753.png)  
 
-![AI Suggestions](./Screenshot/AI%20Suggestions.png)
+### 6. 📄 Export Options  
+- Download resumes in **PDF format**  
 
-### 5. Live Preview
+![Download & Share](./Screenshot/downloadShare.png)  
 
-Real-time preview of resume changes as you edit.
+---
 
-![Live Preview](./Screenshot/Screenshot%202024-07-08%20233753.png)
+## Contribution 🤝
 
-### 6. Export Options
-
-Download resumes in PDF format for easy sharing and printing.
-
-![Download & Share](./Screenshot/downloadShare.png)
-
-## Contribution
-
-We welcome contributions to improve AI Resume Builder! To contribute, follow these steps:
+We welcome contributions! To contribute, follow these steps:
 
 ### 1. Fork the Repository
 
-Click the **Fork** button at the top right of the repository page to create your own copy.
+Click the **Fork** button on the top right of the repository page.
 
 ### 2. Clone Your Fork
 
@@ -118,9 +166,9 @@ git checkout -b feature-name
 
 Replace `feature-name` with a descriptive name for your changes.
 
-### 4. Make Your Changes
+### 4. Make Changes & Test Locally
 
-Modify the code and test your changes locally.
+Modify the code and ensure everything works as expected.
 
 ### 5. Commit Your Changes
 
@@ -142,13 +190,13 @@ git push origin feature-name
 - Click **"New Pull Request"** and select your branch.
 - Add a description and submit your PR.
 
-### 8. Review and Merge
+### 8. Review & Merge  
 
 The maintainers will review your PR. Once approved, it will be merged into the main repository.
 
-This makes it easier for contributors to understand how to contribute to your project. Let me know if you need further changes! 😊
+---
 
-## Developers
+## Developers 👨‍💻👩‍💻
 
 - [@Sahid Raja Ansari](https://www.linkedin.com/in/sahidrajaansari/)
 - [@Shaharyar Alam](https://www.linkedin.com/in/shaharyar-alam-305322208/)
