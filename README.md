@@ -58,9 +58,9 @@ NODE_ENV=Dev
 ALLOWED_SITE=http://localhost:5173
 ```
 
-#### 🔹 Frontend (`ai-resume-builder-frontend/.env.local`)  
+#### 🔹 Frontend (`Frontend/.env.local`)  
 
-Create a `.env.local` file inside the `ai-resume-builder-frontend/` directory and add the following:  
+Create a `.env.local` file inside the `Frontend/` directory and add the following:  
 
 ```plaintext
 VITE_GEMENI_API_KEY={Your Gemini API Key}
@@ -87,7 +87,7 @@ Now, you can **choose** to set up the project **with or without Docker**.
 
 3. Start the frontend server:
     ```bash
-    cd ../ai-resume-builder-frontend/
+    cd ../Frontend/
     npm install
     npm run dev
     ```
@@ -100,7 +100,7 @@ Now, you can **choose** to set up the project **with or without Docker**.
 
 1. Navigate to the frontend directory and install dependencies:
     ```bash
-    cd ai-resume-builder-frontend/
+    cd Frontend/
     npm install
     ```
 
