@@ -30,19 +30,50 @@ AI Resume Builder is a sophisticated web application that leverages artificial i
 ![Thumbnail](./Screenshot/Thumbnil.png)
 
 ---
-
 ## Installation
 
 To run AI Resume Builder locally, follow these steps:
 
-### Clone the Repository
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/sahidrajaansari/ai-resume-builder.git
 cd ai-resume-builder
 ```
 
-### Setup with Docker
+### 2️⃣ Create Environment Files  
+
+Before proceeding, create the necessary environment files for **both frontend and backend**.
+
+#### 🔹 Backend (`Backend/.env`)  
+
+Create a `.env` file inside the `Backend/` directory and add the following:  
+
+```plaintext
+MONGODB_URI={Your MongoDB URI} # If using Docker: mongodb://localhost:27017/
+PORT=5001
+JWT_SECRET_KEY={Your Secret Key}
+JWT_SECRET_EXPIRES_IN="1d"
+NODE_ENV=Dev
+ALLOWED_SITE=http://localhost:5173
+```
+
+#### 🔹 Frontend (`ai-resume-builder-frontend/.env.local`)  
+
+Create a `.env.local` file inside the `ai-resume-builder-frontend/` directory and add the following:  
+
+```plaintext
+VITE_GEMENI_API_KEY={Your Gemini API Key}
+VITE_APP_URL=http://localhost:5001/
+```
+
+### 3️⃣ Choose a Setup Method  
+
+Now, you can **choose** to set up the project **with or without Docker**.
+
+---
+
+### 🚀 Setup with Docker
 
 1. Navigate to the backend directory:
     ```bash
@@ -61,9 +92,11 @@ cd ai-resume-builder
     npm run dev
     ```
 
-### Setup without Docker
+---
 
-#### Frontend Setup
+### 🔧 Setup without Docker
+
+#### **Frontend Setup**
 
 1. Navigate to the frontend directory and install dependencies:
     ```bash
@@ -71,18 +104,12 @@ cd ai-resume-builder
     npm install
     ```
 
-2. Create a `.env.local` file with the following content:
-    ```plaintext
-    VITE_GEMENI_API_KEY={Your Gemini API Key}
-    VITE_APP_URL=http://localhost:5001/
-    ```
-
-3. Start the frontend server:
+2. Start the frontend server:
     ```bash
     npm run dev
     ```
 
-#### Backend Setup
+#### **Backend Setup**
 
 1. Navigate to the backend directory and install dependencies:
     ```bash
@@ -90,17 +117,7 @@ cd ai-resume-builder
     npm install
     ```
 
-2. Create a `.env` file with the following content:
-    ```plaintext
-    MONGODB_URI={Your MongoDB URI} # If using Docker: mongodb://localhost:27017/
-    PORT=5001
-    JWT_SECRET_KEY={Your Secret Key}
-    JWT_SECRET_EXPIRES_IN="1d"
-    NODE_ENV=Dev
-    ALLOWED_SITE=http://localhost:5173
-    ```
-
-3. Start the backend server:
+2. Start the backend server:
     ```bash
     npm run dev
     ```
