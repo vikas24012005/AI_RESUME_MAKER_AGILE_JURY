@@ -124,7 +124,6 @@ Now, you can **choose** to set up the project **with or without Docker**.
 
 ### 1. 🔒 Secure User Authentication  
 - Custom authentication with **bcrypt** password hashing  
-- **JWT-based** session management  
 
 ![Sign In](./Screenshot/SignIn.png)  
 ![Sign Up](./Screenshot/SignUp.png)  
